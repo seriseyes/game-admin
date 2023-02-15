@@ -1,0 +1,23 @@
+.wrap {
+    flex-wrap: wrap;
+}
+
+.item {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.loading {
+    animation: taadaa 1s infinite;
+}
+
+@keyframes taadaa {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
