@@ -5,9 +5,10 @@ import Login from "../auth/Login";
 import {toast} from "react-toastify";
 import Row from "../../components/layouts/Row";
 import css from "./Menu.module.css";
-import Table from "../table/Table";
+import Deposit from "../table/Deposit";
 import Users from "../users/Users";
 import Article from "../article/Article";
+import Withdraw from "../table/Withdraw";
 
 function Menu() {
     const navigate = useNavigate();
@@ -46,11 +47,11 @@ export const Routers = createBrowserRouter([
         children: [
             {
                 path: "deposit",
-                element: <Table/>
+                element: <Deposit/>
             },
             {
                 path: "withdraw",
-                element: <Table/>
+                element: <Withdraw/>
             },
             {
                 path: "users",

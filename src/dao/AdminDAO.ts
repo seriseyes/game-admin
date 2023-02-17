@@ -11,12 +11,12 @@ export default class AdminDAO extends BaseDAO {
         return super.get<Response>(`/requests?model=${model}`);
     }
 
-    async submitRequest(id: number) {
-        return super.get<Response>(`/requests/submit?id=${id}`);
+    async submitRequest(id: number, action: string) {
+        return super.get<Response>(`/requests/submit?id=${id}&action=${action}`);
     }
 
     async findAllUsers() {
-        return super.get<Response>("/users");
+        return super.getList<User>("/users");
     }
 
     async saveUser(user: User) {
