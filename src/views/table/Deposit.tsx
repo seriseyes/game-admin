@@ -9,6 +9,7 @@ import Grid from "../../components/grid/Grid";
 export interface Table {
     id: number;
     username: string;
+    bankName: string;
     bankId: string;
     account: string;
     amount: number;
@@ -36,7 +37,8 @@ export default function Deposit() {
     }
 
     return <Grid fetcher={fetchData} searchLabel={"Нэрээр хайх"} columns={[
-        {name: <strong>Нэр</strong>, selector: (row: Table) => row.username},
+        {name: <strong>Нэвтрэх нэр</strong>, selector: (row: Table) => row.username},
+        {name: <strong>Банкны нэр</strong>, selector: (row: Table) => row.bankName},
         {name: <strong>Банк</strong>, selector: (row: Table) => row.bankId},
         {name: <strong>Данс</strong>, selector: (row: Table) => row.account},
         {name: <strong>Мөнгө</strong>, selector: (row: Table) => row.amount},
